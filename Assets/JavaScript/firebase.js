@@ -17,7 +17,7 @@ $("#add-employee-btn").on("click", function(event) {
   // Grabs user input
   var trainName = $("#train-name-input").val().trim();
   var destination = $("#destination-input").val().trim();
-  var trainTime = moment($("#train-time-input").val().trim(), "00:00").format("X");
+  var trainTime = $("#train-time-input").val().trim();
   var frequency = $("#frequency-input").val().trim();     
 
 
@@ -60,21 +60,13 @@ database.ref().on("child_added", function(childSnapshot) {
   // Train Info
   console.log(name);
   console.log(destination);
-  console.log(time);
+  console.log(trainTime);
   console.log(frequency);
 
 
-  // Create the new row
-  var newRow = $("<tr>").append(
-    $("<td>").text(trainName),
-    $("<td>").text(destination),
-    $("<td>").text(trainTime),
-    $("<td>").text(frequency),
-  
-  );
-
+ 
   // Append the new row to the table
-  $("#employee-table > tbody").append(newRow);
+ 
 
 
 
@@ -107,5 +99,19 @@ database.ref().on("child_added", function(childSnapshot) {
    // Next Train
    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+    
+   
+
+   // Create the new row
+  var newRow = $("<tr>").append(
+    $("<td>").text(trainName),
+    $("<td>").text(destination),
+    $("<td>").text(trainTime),
+    $("<td>").text(frequency),
+    $("<td>").text(nextTrain)
+  
+  );
+
+  $("#table tbody").append(newRow);
 
  });
