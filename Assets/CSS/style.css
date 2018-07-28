@@ -1,0 +1,42 @@
+.jumbotron {
+ background: #654321;
+}
+
+.container {
+    text-align: center;
+    color:#fff;
+
+}
+
+.table, #form {
+   margin: 0 auto;
+    width: 800px;
+    border: 2px solid #dddddd;
+}
+
+#form{
+    padding: 5px;
+    position: relative;
+}
+
+.formgroup, .form-control {
+    margin: 0 auto;
+    width: 780px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+table table-sm {
+    height: 50px;
+
+}
+
+thead {
+    /* height:30px;
+    width: 100%;
+    padding: 0;
+    margin: 0; */
+    background: blue;
+    color: white;
+
+}
