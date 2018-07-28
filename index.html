@@ -85,11 +85,7 @@
         <td></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      
       </tr>
     </tbody>
   </table>
@@ -100,7 +96,7 @@
 <!-- Add Train Container -->
 <div id="form">
 <form>
-    <table class="table table-sm">
+    <table class="table table-sm" id='employee table'>
         <thead>
           <tr>
             <th scope="col">Add Train</th>
@@ -108,24 +104,24 @@
         </thead>
     </table>
   <div class="form-group">
-    <label for="exampleInputEmail1">Train name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="train-name-input">Train name</label>
+    <input type="text" class="form-control" id="train-name-input">
     <small id="emailHelp">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Destination</label>
-    <input type="text" class="form-control" id="exampleInputPassword1">
+    <label for="destination-input">Destination</label>
+    <input type="text" class="form-control" id="destination-input">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">First Train Time (HH:mm - military time) </label>
-    <input type="text" class="form-control" id="exampleInputPassword1">
+    <label for="train-time-input">First Train Time (HH:mm - military time) </label>
+    <input type="text" class="form-control" id="train-time-input">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Frequency (min) </label>
-    <input type="text" class="form-control" id="exampleInputPassword1">
+    <label for="frequency-input">Frequency (min) </label>
+    <input type="text" class="form-control" id="frequency-input">
   </div>
   <div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" id="add-employee-btn"class="btn btn-primary">Submit</button>
   </form>
 </div>
   <!-- Firebase -->
